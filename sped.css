@@ -1,0 +1,214 @@
+:root {
+
+--font-color: #FFF; /*white*/
+--main-color: #B39A92; /*brown*/
+--dark-accent-color: #80B3A8; /*teal*/
+--light-accent-color: #FFEFEA; /*pink*/
+--color5: #EAFFFA; /*light green*/
+
+/*
+
+/* Color Theme Swatches in Hex *
+.calming-element-1-hex { color: #FFFFFF; }
+.calming-element-2-hex { color: #B39A92; }
+.calming-element-3-hex { color: #FFEFEA; }
+.calming-element-4-hex { color: #80B3A8; }
+.calming-element-5-hex { color: #EAFFFA; }
+
+/* Color Theme Swatches in RGBA *
+.calming-element-1-rgba { color: rgba(255, 255, 255, 1); }
+.calming-element-2-rgba { color: rgba(178, 154, 145, 1); }
+.calming-element-3-rgba { color: rgba(255, 239, 233, 1); }
+.calming-element-4-rgba { color: rgba(128, 178, 167, 1); }
+.calming-element-5-rgba { color: rgba(233, 255, 250, 1); }
+
+/* Color Theme Swatches in HSLA *
+.calming-element-1-hsla { color: hsla(0, 0, 100, 1); }
+.calming-element-2-hsla { color: hsla(15, 17, 63, 1); }
+.calming-element-3-hsla { color: hsla(15, 100, 95, 1); }
+.calming-element-4-hsla { color: hsla(167, 24, 60, 1); }
+.calming-element-5-hsla { color: hsla(167, 100, 95, 1); }
+
+font-family: 'Poppins', sans-serif;
+*/
+}
+
+* {
+  margin: 0px;
+  padding: 0px; 
+  outline: none;
+  border: 0px;
+} /*reset whitespace*/
+
+html {
+	font: 16px 'Poppins';
+}
+
+.align-page {
+	display: flex;
+	flex-direction: column;
+}
+
+h3 {
+	padding: 20px;
+}
+
+nav {
+	flex: 1 1 150px;
+	background-color: var(--dark-accent-color);
+}
+
+.heading {
+	margin:25px 20px;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#categoryForm{
+	flex: 1 1 415px;
+	vertical-align: middle;
+}
+
+
+footer {
+	flex: 1 1 100px;
+	line-height: 100px;
+	vertical-align: middle;
+	text-align: center;
+	background-color: var(--dark-accent-color);
+}
+
+/*hide as needed*/
+.hidden {
+	display: none;
+}
+
+/*Eligibility category form*/
+
+form {
+	background-color: var(--main-color);
+	padding: 20px;
+}
+
+#categoryForm{
+	height: 100%;
+}
+
+/*SLD Checkboxes form*/
+#sldForm {
+	background-color: var(--main-color);
+	padding: 20px;
+	height: 100%;
+
+}
+
+#sldImpactsForm {
+
+}
+
+label {
+	color: var(--font-color);
+	font: 600 20px 'Poppins';
+}
+
+/*category form*/
+
+input[type=text], select {
+	font:20px 'Poppins';
+	width: 350px;
+	padding: 3px;
+	margin: 10px 6px;
+	border: 1px solid var(--dark-accent-color);
+	border-radius: 5px;
+}
+
+input[type=text]:focus {
+	border: 3px solid var(--dark-accent-color);
+}
+
+input.error {
+   border: 2px solid red;
+}
+
+/*sld checkboxes form*/
+
+input[type=checkbox] + label{
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+input[type=checkbox] {
+	position: absolute; 
+	height: 1px;
+ 	width: 1px;
+   	clip: rect(0 0 1 1); 
+}
+
+input[type=checkbox] + label::before {
+   content: "\00a0";  /* Non-breaking space */
+   display: inline-block;
+   width: 1em;  height: 1em; 
+   text-align: center;
+   line-height: 1em;
+   font-size: 0.8em;
+   margin-right: 10px;
+   background-color: #aaa;
+   border: 0.125em solid white;
+}
+
+input[type=checkbox]:checked + label::before {
+   content: "\2713";  /* checkmark */
+   color: white;
+   background: black;
+}
+
+/*additional layer of color on checkboxes
+input[type=checkbox]:focus + label::before {
+   box-shadow: 0 0 0 3px gray;
+} 
+*/
+
+/*submit button style*/
+
+input[type=submit] {
+	font: 800 20px 'Poppins';
+	display: block;
+	margin: 10px 0px;
+	cursor: pointer;
+	height: 50px; 
+	width: 100px;
+	box-shadow: 0px 5px 0px 1px #DCDCDC;
+	border-radius: 15px;
+	background-color: var(--dark-accent-color);
+	border: 1px solid black;
+}
+
+input[type=submit]:hover {
+	background-color: var(--color5);
+  	background: var(--color5);
+}
+
+input[type=submit]:active {
+	transform: translateY(6px);
+	border-bottom: 1px solid;
+	box-shadow: 1px 3px 0px 1px #666;
+}
+
+/*statement at the end*/
+#statement{
+	font-size: 20px;
+}
+
+h2 {
+	font-size: 26px;
+	font-weight: 600;
+	padding: 20px 10px;
+}
+
+#statement p {
+	padding: 30px;
+	border: 2px solid;
+}
+

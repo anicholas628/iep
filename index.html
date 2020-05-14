@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="special education tools">
+  <meta name="author" content="Amber Nicholas">
+
+  <link rel="stylesheet" href="sped.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="form.js" defer></script>
+
+  <title>Impact Statement Generator</title>
+
+</head>
+<div class="align-page">
+	<nav>
+		
+	</nav>
+
+	<body>
+		<div >
+
+			<div id="info">		
+				<div class="heading">
+					<h1>Better Impact of Disability Statement Tool</h1>
+					<p>This tool generates a statement to place in the impact section of GOIEP on the "other info" tab of the IEP.</p>
+				</div>
+			<!--Impact Form-->
+			
+				<form id="categoryForm" name="name" action="" method=""><!--GET shows the data in the URL. POST does not-->
+					<label for="fname">First name:</label><!--The "for" in the label should match the "id" of the input-->
+					<input type="text" name="fname" id="fname" required><br><!--the name refers to the label for what is sent to the server-->
+					<label for="lname">Last name:</label>
+					<input type="text" name="lname" id=fname><br>
+					<label for="gender">Gender:</label>
+					<select name="gender" id="gender">
+						<option value="him">male</option>
+						<option value="her">female</option>
+					</select>
+					<label for="category">Eligibility Category:</label>
+					<select name="category" id="category">
+						<option value="specific learning disability">Specific Learning Disability</option>
+					</select>
+					<input type="submit" value="submit" id="submitCategoryForm"><!--value specifies what the button should say-->
+				</form>
+			</div>
+
+					<!--SLD Form-->
+			<div id="sld" class="hidden">
+				<div class="heading">
+					<h1>Specific Learning Disability</h1>
+					<p>Please choose the processing deficits which apply to the student found in the psychological report.</p>
+				</div>
+				<form id="sldForm">
+	   				<p>Processing Deficits:</p> <!--because p is a block element, you don't need a <br>-->
+	   				<p>
+	   					<input type="checkbox" name="sld" value="working memory" id="memory">
+	   					<label for="memory">Working Memory</label>
+	   				</p>
+	   				<p>  					
+	   					<input type="checkbox" name="sld" value="attention" id="attention">
+	   					<label for="attention">Attention/ Concentration</label>
+	   				</p>
+	   				<p>  					
+	   					<input type="checkbox" name="sld" value="rapid naming/ retrieval fluency" id="rapid">
+	   					<label for="rapid">Rapid Naming/ Retrieval Fluency</label>
+	   				</p>
+	   				<p>  					
+	   					<input type="checkbox" name="sld" value="auditory discrimination/ auditory processing" id="audProcessing">
+	   					<label for="audProcessing">Auditory Discrimination/ Auditory Processing</label>
+	   				</p>
+	   				<p>  					
+	   					<input type="checkbox" name="sld" value="phonological awareness" id="phonAwareness">
+	   					<label for="phonAwareness">Phonological Awareness (sound structure of language)
+						NOTE: Phonemic awareness is a subset of phonological awareness. Any student with phonological awareness difficulty will have phonemic awareness trouble, as well.
+						</label>
+	   				</p>
+	   				<p> 					
+	   					<input type="checkbox" name="sld" value="phonological memory" id="phonMemory">
+	   					<label for="phonMemory">Phonological Memory (memory for sounds of letters)</label>
+	   				</p>
+	   				<p> 					
+	   					<input type="checkbox" name="sld" value="phonemic awareness" id="phonemic">
+	   					<label for="phonemic">phonemic Awareness (sounds within words)
+						NOTE: Phonemic awareness is a subset of phonological awareness.
+						</label>
+	   				</p>
+	   				<p>					
+	   					<input type="checkbox" name="sld" value="auditory sequencing" id="audSequencing">
+	   					<label for="audSequencing">Auditory Sequencing</label>
+	   				</p>
+	   				<p> 					
+	   					<input type="checkbox" name="sld" value="visual perception/ sequencing" id="perception">
+	   					<label for="perception">Visual Perception/ Sequencing</label>
+	   				</p>
+	   				<p> 					
+	   					<input type="checkbox" name="sld" value="visual motor integration/ spatial ability" id="vmi">
+	   					<label for="vmi">Visual Motor Integration/ Spatial Ability</label>
+	   				</p>
+	   				<p>  					
+	   					<input type="checkbox" name="sld" value="processing speed" id="speed">
+	   					<label for="speed">Processing Speed</label>
+	   				</p>
+	   				<p>					
+	   					<input type="checkbox" name="sld" value="long-term memory/ long-term retrieval" id="longTerm">
+	   					<label for="longTerm">Long-Term Memory/ Long-Term Retrieval</label>
+	   				</p>
+	   				<p>				
+	   					<input type="checkbox" name="sld" value="short-term memory" id="shortTerm">
+	   					<label for="shortTerm">Short-Term Memory</label>
+	   				</p>
+	   				<p> 					
+	   					<input type="checkbox" name="sld" value="verbal reasoning and comprehension" id="comprehension">
+	   					<label for="comprehension">Verbal Reasoning/ Verbal Comprehension</label>
+	   				</p>
+	   				<p>					
+	   					<input type="checkbox" name="sld" value="nonverbal or perceptual reasoning" id="perceptual">
+	   					<label for="perceptual">Nonverbal Reasoning/ Perceptual Reasoning</label>
+	   				</p>
+	   				<p> 					
+	   					<input type="checkbox" name="sld" value="fluid reasoning/ quantitative ability" id="fluid">
+	   					<label for="fluid">Fluid Reasoning/ Quantitative Ability</label>
+	   				</p>
+	   				<p> 					
+	   					<input type="checkbox" name="sld" value="social perception/ social skills" id="social">
+	   					<label for="social">Social Perception/ Social Skills</label>
+	   				</p>
+	   				<p>			
+	   					<input type="checkbox" name="sld" value="knowledge/ crystalized intelligence" id="knowledge">
+	   					<label for="knowledge">Knowledge/ Crystalized Intelligence</label>
+	   				</p>
+	   				<p>			
+	   					<input type="checkbox" name="sld" value="exectutive functioning" id="executive">
+	   					<label for="executive">Executive Functioning</label>
+	   				</p>
+	   				<p>
+	   					<input type="checkbox" name="sld" value="orthographic processing" id="orthographic">
+						<label for="orthographic">Orthographic Processing</label>
+	   				</p>
+					<input type="submit" name="submit" id="submitSldForm">
+				</form>
+			</div>
+	<!--End Page sldForm-->
+	<!--sld deficit impacts forms-->
+			<form id="sldImpactsForm">
+				<div class="hidden" id="working-memory">
+					<h3>Please choose your student's impacts associated with working memory: </h3>
+					<p>
+						<input type="checkbox" name="working-memory" id="workMemA" value="forget assignments or parts of assignments">
+						<label for="workMemA">Forgets assignments or parts of assignments</label>
+					</p>
+					<p>
+						<input type="checkbox" name="working-memory" id="workMemB" value="forget to bring materials to or from school">
+						<label for="workMemB">Forgets to bring materials to or from school</label>
+					</p>
+					<p>
+						<input type="checkbox" name="working-memory" id="workMemC" value="forget to hand in homework">
+						<label for="workMemC">Forgets to hand in homework</label>
+					</p>
+					<p>
+						<input type="checkbox" name="working-memory" id="workMemD" value="lose or misplace belongings">
+						<label for="workMemD">Loses or misplaces belongings</label>
+					</p>
+					<p>
+						<input type="checkbox" name="working-memory" id="workMemE" value="forget classroom procedures">
+						<label for="workMemE">forgets classroom procedures</label>
+					</p>
+					<p>
+						<input type="checkbox" name="working-memory" id="workMemF" value="forget to do chores">
+						<label for="workMemF">Forgets to do chores</label>
+					</p>
+					<p>
+						<input type="checkbox" name="working-memory" id="workMemG" value="forget part or all of verbal directions for tasks or chores">
+						<label for="workMemE">Forgets part or all of verbal directions for tasks or chores</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="attention-concentration">
+					<h3>Please choose your student's impacts associated with attention/ concentration: </h3>
+					<p>
+						<input type="checkbox" name="attention" id="attA" value="stop before work is finished">
+						<label for="attA">Stops before work is finished</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attB" value="fail to complete work or chores on time">
+						<label for="attB">Fails to complete work or chores on time</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attC" value="switch frequently between activities">
+						<label for="attC">Switches frequently between activities</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attD" value="have difficulty listening to stories read aloud">
+						<label for="attD">Has difficulty listening to stories read aloud</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attE" value="be distracted by things happening around him or her when doing seatwork or homework">
+						<label for="attE">Is distracted by things happening around him or her when doing seatwork or homework</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attF" value="have difficulty remaining on task">
+						<label for="attF">Has difficulty remaining on task</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attG" value="have difficulty focusing attention in distracting situations">
+						<label for="attG">Has difficulty focusing attention in distracting situations</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attF" value="display disruptive behaviors">
+						<label for="attF">Displays disruptive behaviors</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attH" value="have difficulty organizing materials">
+						<label for="attH">Has difficulty organizing materials</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attI" value="fail to complete work on time">
+						<label for="attI">Fails to complete work on time</label>
+					</p>
+					<p>
+						<input type="checkbox" name="attention" id="attJ" value="stop before work is finished">
+						<label for="attJ">Stops before work is finished</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="rapid-naming">
+					<h3>Please choose your student's impacts associated with rapid naming: </h3>
+					<p>
+						<input type="checkbox" name="rapid-naming" id="rapA" value="have difficulty with reading fluency">
+						<label for="rapA">Difficulty with reading fluency</label>
+					</p>
+					<p>
+						<input type="checkbox" name="rapid-naming" id="rapB" value="have slow and/ or laborious oral reading">
+						<label for="rapB">Slow and/ or laborious oral reading</label>
+					</p>
+					<p>
+						<input type="checkbox" name="rapid-naming" id="rapC" value="have difficulty with timed reading tasks">
+						<label for="rapC">Difficulty with timed reading tasks</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="aud-processing">
+					<h3>Please choose your student's impacts associated with auditory discrimination/ auditory processing: </h3>
+					<p>
+						<input type="checkbox" name="aud-processing" id="audProcA" value="have an inability to recognize phonemes(sounds), including the ability to identify words and sounds that are similar and those that are different">
+						<label for="audProcA">Inability to recognize phonemes(sounds), including the ability to identify words and sounds that are similar and those that are different</label>
+					</p>
+					<p>
+						<input type="checkbox" name="aud-processing" id="audProcB" value="have inaccurate pronunciation of new vocabulary words">
+						<label for="audProcB">Inaccurate pronunciation of new vocabulary words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="aud-processing" id="audProcC" value="have confusion between similar sounding words">
+						<label for="audProcC">Confusion between similar sounding words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="aud-processing" id="audProcD" value="have spelling difficulties">
+						<label for="audProcD">Spelling difficulties</label>
+					</p>
+					<p>
+						<input type="checkbox" name="aud-processing" id="audProcE" value="have difficulty learning foreign languages">
+						<label for="audProcE">Difficulty learning foreign languages</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="phon-awareness">
+					<h3>Please choose your student's impacts associated with phonological awareness: </h3>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonA" value="have difficulty isolating sounds within words">
+						<label for="phonA">Difficulty isolating sounds within words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonB" value="have difficulty blending sounds into words or word parts">
+						<label for="phonB">Difficulty blending sounds into words or word parts</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonC" value="have difficulty identifying rhyming words">
+						<label for="phonC">Difficulty identifying rhyming words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonD" value="have ifficulty matching sounds">
+						<label for="phonD">Difficulty matching sounds</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonE" value="have difficulty segmenting words into sound parts">
+						<label for="phonE">Difficulty segmenting words into sound parts</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonF" value="have difficulty rearranging sounds within words">
+						<label for="phonF">Difficulty rearranging sounds within words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonG" value="have difficulty identifying syllables within words">
+						<label for="phonG">Difficulty identifying syllables within words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonH" value="have difficulty re-arranging or manipulating syllables within words">
+						<label for="phonH">Difficulty re-arranging or manipulating syllables within words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonI" value="have difficulty blending syllables into words">
+						<label for="phonI">Difficulty blending syllables into words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonJ" value="have difficulty segmenting words into syllables">
+						<label for="phonJ">Difficulty segmenting words into syllables</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonK" value="have difficulty identifying words within a sentence">
+						<label for="phonK">Difficulty identifying words within a sentence</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonL" value="have difficulty re-arranging or manipulating words within a sentence">
+						<label for="phonL">Difficulty re-arranging or manipulating words within a sentence</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonM" value="have difficulty identifying sentences within a passage">
+						<label for="phonM">Difficulty identifying sentences within a passage</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonN" value="have difficulty re-arranging or manipulating sentences within a passage">
+						<label for="phonN">Difficulty re-arranging or manipulating sentences within a passage</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonO" value="have difficulty learning basic reading skills needed for phonemic decoding of unknown words">
+						<label for="phonO">Difficulty learning basic reading skills needed for phonemic decoding of unknown words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonP" value="have difficulty learning sound/symbol relationships">
+						<label for="phonP">Difficulty learning sound/symbol relationships</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phon-awareness" id="phonQ" value="have difficulty learning to spell words correctly">
+						<label for="phonQ">Difficulty learning to spell words correctly</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="phonemic-awar">
+					<h3>Please choose your student's impacts associated with phonemic awareness: </h3>
+					<p>
+						<input type="checkbox" name="phonemic-awar" id="phon1" value="have difficulty isolating sounds within words">
+						<label for="phon1">Difficulty isolating sounds within words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonemic-awar" id="phon2" value="have difficulty blending sounds into words or word parts">
+						<label for="phon2">Difficulty blending sounds into words or word parts</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonemic-awar" id="phon3" value="have difficulty identifying rhyming words">
+						<label for="phon3">Difficulty identifying rhyming words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonemic-awar" id="phon4" value="have difficulty matching sounds">
+						<label for="phon4">Difficulty matching sounds</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonemic-awar" id="phon5" value="have difficulty segmenting words into parts">
+						<label for="phon5">Difficulty segmenting words into parts</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonemic-awar" id="phon6" value="have difficulty rearranging sounds within words">
+						<label for="phon6">Difficulty rearranging sounds within words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonemic-awar" id="phon7" value="have difficulty learning basic reading decoding skills involving phonics">
+						<label for="phon7">Difficulty learning basic reading decoding skills involving phonics</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonemic-awar" id="phon8" value="have difficulty learning sound/symbol relationships">
+						<label for="phon8">Difficulty learning sound/symbol relationships</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonemic-awar" id="phon9" value="have difficulty learning to spell words correctly">
+						<label for="phon9">Difficulty learning to spell words correctly</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="phonMem">
+					<h3>Please choose your student's impacts associated with phonological memory: </h3>
+					<p>
+						<input type="checkbox" name="phonMem" id="mem1" value="have difficulty remembering sound/symbol relationships">
+						<label for="mem1">Difficulty remembering sound/symbol relationships</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonMem" id="mem2" value="have difficulty with sound blending for identification of unknown words in reading">
+						<label for="mem2">Difficulty with sound blending for identification of unknown words in reading</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonMem" id="mem3" value="have difficulty with phonetic analysis of words">
+						<label for="mem3">Difficulty with phonetic analysis of words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="phonMem" id="mem4" value="have difficulty with spelling">
+						<label for="mem4">Difficulty with spelling</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="aud-sequencing">
+					<h3>Please choose your student's impacts associated with auditory sequencing: </h3>
+					<p>
+						<input type="checkbox" name="aud-sequencing" id="aud1" value="have difficulty remembering or reconstructing the order of items in a list or the order of sounds in a word or syllable">
+						<label for="aud1">Difficulty remembering or reconstructing the order of items in a list or the order of sounds in a word or syllable</label>
+					</p>
+					<p>
+						<input type="checkbox" name="aud-sequencing" id="aud2" value="not appear to pay attention to lectures">
+						<label for="aud2">May not appear to pay attention to lectures</label>
+					</p>
+					<p>
+						<input type="checkbox" name="aud-sequencing" id="aud3" value="have difficulty following multi-step oral directions">
+						<label for="aud3">Difficulty following multi-step oral directions</label>
+					</p>
+					<p>
+						<input type="checkbox" name="aud-sequencing" id="aud4" value="have spelling difficulties">
+						<label for="aud4">Spelling difficulties</label>
+					</p>
+				</div>
+				<div class="hidden" id="vis-perception">
+					<h3>Please choose your student's impacts associated with visual perception/ sequencing: </h3>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per1" value="have difficulty interpreting what is seen">
+						<label for="per1">Difficulty interpreting what is seen</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per2" value="have difficulty visually distinguishing one object from another">
+						<label for="per2">Difficulty visually distinguishing one object from another</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per3" value="have difficulty in noting similarity between letters and words">
+						<label for="per3">Difficulty in noting similarity between letters and words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per4" value="have difficulty organizing the position and shape of what is seen">
+						<label for="per4">Difficulty organizing the position and shape of what is seen</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per5" value="have difficulty distinguishing between look-alike words">
+						<label for="per5">Difficulty distinguishing between look-alike words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per6" value="reverse letters, numbers, or words">
+						<label for="per6">Reversal of letters, numbers, or words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per7" value="have problems distinguishing color, size, shape, and directions">
+						<label for="per7">Problem distinguishing color, size, shape, and directions</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per8" value="copy things inaccurately">
+						<label for="per8">Inaccurate copying</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per9" value="inaccurately identify symbols">
+						<label for="per9">Inaccurate identification of symbols</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per10" value="have trouble interpreting maps, charts, and graphs">
+						<label for="per10">Trouble interpreting maps, charts, and graphs</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per11" value="have problems sequencing plots of stories">
+						<label for="per11">Problems sequencing plots of stories</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per12" value="skips words, read part of sentence out of order, or reread parts of the same sentence">
+						<label for="per12">Skips words, reads part of sentence out of order, or rereads parts of the same sentence</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per13" value="have difficulty copying, such as reversals or omissions">
+						<label for="per13">Difficulty copying, reversals, omissions</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per14" value="have spelling problems">
+						<label for="per14">Spelling problems</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per15" value="have difficulty following an equation">
+						<label for="per15">Difficulty following an equation</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vis-perception" id="per16" value="lose place while reading, skip words, read words out of order, or re-read parts of the same sentence or selection">
+						<label for="per16">Loses place while reading, skips words, read words out of order, re-reads parts of the same sentence or selection</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="vmi-impacts">
+					<h3>Please choose your student's impacts associated with visual motor integration: </h3>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi1" value="have problems coordinating and relaying information from visual input to involved sensory motor areas">
+						<label for="vmi1">Problems coordinating and relaying information from visual input to involved sensory motor areas</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi2" value="have an impaired ability to orient body in space, especially in relation to other people and objects">
+						<label for="vmi2">Impaired ability to orient body in space, especially in relation to other people and objects</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi3" value="have problems with directionality, which can impair the ability to track when reading and following math equations">
+						<label for="vmi3">Problems with directionality, which can impair ability to track when reading and following math equations</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi4" value="Appears clumsy">
+						<label for="vmi4">Appears clumsy</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi5" value="have illegible handwriting">
+						<label for="vmi5">Illegible handwriting</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi6" value="copy inaccurately">
+						<label for="vmi6">Inaccurate copying</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi7" value="have difficulty organizing information on paper, including aligning problems and spacing correctly">
+						<label for="vmi7">Difficulty organizing information on paper, including aligning problems and spacing correctly</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi8" value="have trouble transitioning between 2 sources of information (keyboard & worksheet)">
+						<label for="vmi8">Trouble transitioning between 2 sources of information (keyboard & worksheet)</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi9" value="Eye-hand coordination problems">
+						<label for="vmi1">Eye-hand coordination problems</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi9" value="have a poor pencil grip">
+						<label for="vmi1">Poor pencil grip</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi10" value="have difficulties keeping up with materials">
+						<label for="vmi10">Difficulties keeping up with materials</label>
+					</p>
+					<p>
+						<input type="checkbox" name="vmi-impacts" id="vmi11" value="have difficulties with geometry concepts">
+						<label for="vmi11">Difficulties with geometry concepts</label>
+					</p>
+				</div>
+				
+				<div class="hidden" id="speed-impacts">
+					<h3>Please choose your student's impacts associated with processing speed: </h3>
+					<p>
+						<input type="checkbox" name="speed-impacts" id="speed1" value="take longer than average time to complete work">
+						<label for="speed1">Takes longer than average time to complete work</label>
+					</p>
+					<p>
+						<input type="checkbox" name="speed-impacts" id="speed2" value="respond slowly to questions">
+						<label for="speed2">Responds slowly to questions</label>
+					</p>
+					<p>
+						<input type="checkbox" name="speed-impacts" id="speed3" value="struggle to make rapid comparisons between and among bits of information">
+						<label for="speed3">Struggles to make rapid comparisons between and among bits of information</label>
+					</p>
+					<p>
+						<input type="checkbox" name="speed-impacts" id="speed4" value="have difficulty copying">
+						<label for="speed4">Has difficulty copying</label>
+					</p>
+					<p>
+						<input type="checkbox" name="speed-impacts" id="speed5" value="have difficulty completing assignments within time limits">
+						<label for="speed5">Has difficulty completing assignments within time limits</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="longMem">
+					<h3>Please choose your student's impacts associated with long-term memory/ long-term retrieval: </h3>
+					<p>
+						<input type="checkbox" name="longMem" id="lm1" value="have difficulty storing and retrieving previously experienced visual and/or auditory information">
+						<label for="lm1">Difficulties storing and retrieving previously experienced visual and/or auditory information</label>
+					</p>
+					<p>
+						<input type="checkbox" name="longMem" id="lm2" value="have difficulty visualizing information">
+						<label for="lm2">Difficulty visualizing information</label>
+					</p>
+					<p>
+						<input type="checkbox" name="longMem" id="lm3" value="have difficulty sustaining interest during visual and/or auditory presentations">
+						<label for="lm3">Difficulty sustaining interest during visual and/or auditory presentations</label>
+					</p>
+					<p>
+						<input type="checkbox" name="longMem" id="lm4" value="have difficulty memorizing poems, speeches, or facts">
+						<label for="lm4">Difficulty memorizing poems, speeches, or facts</label>
+					</p>
+					<p>
+						<input type="checkbox" name="longMem" id="lm5" value="have difficulty remembering details">
+						<label for="lm5">Difficulties remembering details</label>
+					</p>
+					<p>
+						<input type="checkbox" name="longMem" id="lm6" value="have problems with word retrieval">
+						<label for="lm6">Problems with word retrieval</label>
+					</p>
+				</div>		
+				<div class="hidden" id="shortMem">
+					<h3>Please choose your student's impacts associated with short-term memory: </h3>
+					<p>
+						<input type="checkbox" name="shortMem" id="sm1" value="have difficulty remembering information just heard or seen">
+						<label for="sm1">Difficulty remembering information just heard or seen</label>
+					</p>
+					<p>
+						<input type="checkbox" name="shortMem" id="sm2" value="have trouble taking accurate notes">
+						<label for="sm2">Trouble taking accurate notes</label>
+					</p>
+					<p>
+						<input type="checkbox" name="shortMem" id="sm3" value="have difficulty following multi-step oral and written directions">
+						<label for="sm3">Difficulty following multi-step oral and written directions</label>
+					</p>
+					<p>
+						<input type="checkbox" name="shortMem" id="sm4" value="have poor spelling">
+						<label for="sm4">Poor spelling</label>
+					</p>
+					<p>
+						<input type="checkbox" name="shortMem" id="sm5" value="exhibit poor test taking skills">
+						<label for="sm5">Poor test taking skills</label>
+					</p>
+					<p>
+						<input type="checkbox" name="shortMem" id="sm6" value='appear to “tune out”'>
+						<label for="sm6">Appearing to “tune out”</label>
+					</p>
+				</div>
+
+				<div class="hidden" id="verbRC">
+					<h3>Please choose your student's impacts associated with verbal comprehension and reasoning: </h3>
+					<p>
+						<input type="checkbox" name="verbRC" id="rc1" value="have word finding problems">
+						<label for="rc1">Word finding problems</label>
+					</p>
+					<p>
+						<input type="checkbox" name="verbRC" id="rc2" value="have poor organization">
+						<label for="rc2">Poor organization</label>
+					</p>
+					<p>
+						<input type="checkbox" name="verbRC" id="rc3" value="have limited vocabulary">
+						<label for="rc3">Limited vocabulary</label>
+					</p>
+					<p>
+						<input type="checkbox" name="verbRC" id="rc4" value="have developmentally inappropriate quality and quantity of language">
+						<label for="rc4">Developmentally inappropriate quality and quantity of language</label>
+					</p>
+					<p>
+						<input type="checkbox" name="verbRC" id="rc5" value="have limited verbal responses">
+						<label for="rc5">Limited verbal responses</label>
+					</p>
+				</div>	
+
+				<div class="hidden" id="perReas">
+					<h3>Please choose your student's impacts associated with nonverbal or perceptual reasoning: </h3>
+					<p>
+						<input type="checkbox" name="perReas" id="pr1" value="not understand the operation of mechanical devices">
+						<label for="pr1">May not understand the operation of mechanical devices</label>
+					</p>
+					<p>
+						<input type="checkbox" name="perReas" id="pr2" value="appear awkward and inadequate in fine and/or gross motor skills">
+						<label for="pr2">Appears awkward and inadequate in fine and/or gross motor skills</label>
+					</p>
+					<p>
+						<input type="checkbox" name="perReas" id="pr3" value="have difficulty “reading” body language">
+						<label for="pr3">Has difficulty “reading” body language</label>
+					</p>
+					<p>
+						<input type="checkbox" name="perReas" id="pr4" value='“talk his way” through simple motor activities'>
+						<label for="pr4">“Talks his way” through simple motor activities</label>
+					</p>
+					<p>
+						<input type="checkbox" name="perReas" id="pr5" value="have exceptional memory for rote material">
+						<label for="pr5">Has exceptional memory for rote material</label>
+					</p>
+					<p>
+						<input type="checkbox" name="perReas" id="pr6" value="have difficulty making inferences and applying concepts to other situations">
+						<label for="pr6">May have difficulty making inferences and applying concepts to other situations</label>
+					</p>
+					<p>
+						<input type="checkbox" name="perReas" id="pr7" value="have special challenges in mathematics, as following a logical sequence tends to be difficult">
+						<label for="pr7">Mathematics is often a challenge, as following a logical sequence tends to be difficult</label>
+					</p>
+				</div>	
+
+				<div class="hidden" id="fluidQuan">
+					<h3>Please choose your student's impacts associated with fluid reasoning/ quantitative ability: </h3>
+					<p>
+						<input type="checkbox" name="fluidQuan" id="fq5" value="repeat but not follow directions">
+						<label for="fq5">Can repeat but not follow directions</label>
+					</p>
+					<p>
+						<input type="checkbox" name="fluidQuan" id="fq1" value="have difficulty generalizing and drawing inferences">
+						<label for="fq1">Has difficulty generalizing and drawing inferences</label>
+					</p>
+					<p>
+						<input type="checkbox" name="fluidQuan" id="fq2" value="have difficulty solving unique problems">
+						<label for="fq2">Has difficulty solving unique problems</label>
+					</p>
+					<p>
+						<input type="checkbox" name="fluidQuan" id="fq3" value="have difficulty categorizing, comparing, and contrasting">
+						<label for="fq3">Has difficulty categorizing, comparing, and contrasting</label>
+					</p>
+					<p>
+						<input type="checkbox" name="fluidQuan" id="fq4" value="be verbally expressive and do well with concrete thinking">
+						<label for="fq4">Is verbally expressive and does well with concrete thinking</label>
+					</p>
+					<p>
+						<input type="checkbox" name="fluidQuan" id="fq6" value="have good decoding skills but poor comprehension">
+						<label for="fq6">Has good decoding skills but poor comprehension</label>
+					</p>
+					<p>
+						<input type="checkbox" name="fluidQuan" id="fq7" value="have difficulty relating solutions to problems">
+						<label for="fq7">Difficulty relating solutions to problems</label>
+					</p>
+					<p>
+						<input type="checkbox" name="fluidQuan" id="fq8" value="have difficulty transferring and generalizing information">
+						<label for="fq8">Difficulty transferring and generalizing information</label>
+					</p>
+					<p>
+						<input type="checkbox" name="fluidQuan" id="fq9" value="have difficulty understanding mathematic terminology">
+						<label for="fq9">Difficulty understanding mathematic terminology</label>
+					</p>
+				</div>	
+
+				<div class="hidden" id="socialPS">
+					<h3>Please choose your student's impacts associated with social perception and skills: </h3>
+					<p>
+						<input type="checkbox" name="socialPS" id="soc1" value="perceive and interpret social situations inaccurately">
+						<label for="soc1">Perceives and interprets social situations inaccurately</label>
+					</p>
+					<p>
+						<input type="checkbox" name="socialPS" id="soc2" value='be ineffective at recognizing faces, interpreting gestures, deciphering postural cues and “reading” facial expressions'>
+						<label for="soc1">Is ineffective at recognizing faces, interpreting gestures, deciphering postural cues and “reading” facial expressions</label>
+					</p>
+					<p>
+						<input type="checkbox" name="socialPS" id="soc5" value="be unable to perceive proximity and distance">
+						<label for="soc5">Is unable to perceive proximity and distance</label>
+					</p>
+					<p>
+						<input type="checkbox" name="socialPS" id="soc3" value="be unable to notice or distinguish between changes in tones and/or pitch of voice and/or emphasis of delivery">
+						<label for="soc3">Is unable to notice or distinguish between changes in tones and/or pitch of voice and/or emphasis of delivery</label>
+					</p>
+					<p>
+						<input type="checkbox" name="socialPS" id="soc4" value="withdraw in novel situations">
+						<label for="soc4">May withdraw in novel situations</label>
+					</p>
+					<p>
+						<input type="checkbox" name="socialPS" id="soc6" value="naively trust others">
+						<label for="soc6">Naively trusts others</label>
+					</p>
+				</div>	
+
+				<div class="hidden" id="knowledgeCI">
+					<h3>Please choose your student's impacts associated with knowledge/ crystallized intelligence: </h3>
+					<p>
+						<input type="checkbox" name="knowledgeCI" id="know1" value="have difficulty with vocabulary acquisition">
+						<label for="know1">Difficulty with vocabulary acquisition</label>
+					</p>
+					<p>
+						<input type="checkbox" name="knowledgeCI" id="know2" value="have difficulty with knowledge acquisition">
+						<label for="know2">Difficulty with knowledge acquisition</label>
+					</p>
+					<p>
+						<input type="checkbox" name="knowledgeCI" id="know3" value="have difficulty with comprehending language">
+						<label for="know3">Difficulty with comprehending language</label>
+					</p>
+					<p>
+						<input type="checkbox" name="knowledgeCI" id="know4" value="have difficulty with fact-based questions or information question answering">
+						<label for="know4">Difficulty with fact-based questions or information question answering</label>
+					</p>
+					<p>
+						<input type="checkbox" name="knowledgeCI" id="know5" value="have difficulty utilizing prior knowledge to support learning new material">
+						<label for="know5">Difficulty utilizing prior knowledge to support learning new material</label>
+					</p>
+				</div>	
+
+				<div class="hidden" id="executiveFunc">
+					<h3>Please choose your student's impacts associated with executive functioning: </h3>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec1" value="have difficulty learning new activities, generating concepts, and solving problems">
+						<label for="exec1">Difficulty learning new activities, generating concepts, and solving problems</label>
+					</p>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec2" value="have difficulty identifying goals and setting goals">
+						<label for="exec2">Difficulty identifying goals and setting goals</label>
+					</p>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec3" value="begin projects or assignments without necessary materials">
+						<label for="exec3">May begin projects or assignments without necessary materials</label>
+					</p>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec4" value="not allocate sufficient time to finish tasks">
+						<label for="exec4">Does not allocate sufficient time to finish tasks</label>
+					</p>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec5" value="have difficulty with prioritizing">
+						<label for="exec5">Difficulty with prioritizing</label>
+					</p>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec6" value="have poor organizational skills">
+						<label for="exec6">Poor organizational skills</label>
+					</p>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec7" value="have difficulty initiating or starting tasks">
+						<label for="exec7">Difficulty initiating or starting tasks</label>
+					</p>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec8" value="have poor flexibility">
+						<label for="exec8">Poor flexibility</label>
+					</p>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec9" value="have difficulty with self-monitoring">
+						<label for="exec9">Difficulty with self-monitoring</label>
+					</p>
+					<p>
+						<input type="checkbox" name="executiveFunc" id="exec10" value="exhibit inappropriate emotional control">
+						<label for="exec10">Exhibiting inappropriate emotional control</label>
+					</p>
+				</div>	
+
+				<div class="hidden" id="orthProc">
+					<h3>Please choose your student's impacts associated with orthographic processing: </h3>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth1" value="rely heavily on sounding out common words that should be in memory">
+						<label for="orth1">Relies heavily on sounding out common words that should be in memory</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth2" value="have choppy and laborious decoding">
+						<label for="orth2">Choppy and laborious decoding</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth3" value="have difficulty applying knowledge of root words in order to decode a variation of words">
+						<label for="orth3">Difficulty applying knowledge of root words in order to decode a variation of words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth4" value="confuse simple words, like on and to, when reading">
+						<label for="orth4">Confuses simple words, like on and to, when reading</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth5" value="have difficulty with letter recognition and letter reversals">
+						<label for="orth5">Difficulty with letter recognition and letter reversals</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth6" value="exhibit delays in reading fluency, which can result in comprehension deficits">
+						<label for="orth6">Exhibits delays in reading fluency, which can result in comprehension deficits</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth7" value="exhibit a high rate of spelling errors and poor written expression">
+						<label for="orth7">Exhibits a high rate of spelling errors and poor written expression</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth8" value="have reduced sight word vocabulary">
+						<label for="orth8">Reduced sight word vocabulary</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth9" value="have significant difficulty reading irregular words">
+						<label for="orth9">Significant difficulty reading irregular words</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth10" value="have difficulty with rapid word recognition">
+						<label for="orth10">Difficulty with rapid word recognition</label>
+					</p>
+					<p>
+						<input type="checkbox" name="orthProc" id="orth11" value="use impossible orthographic patterns when writing (i.e., eggzit for exit)">
+						<label for="orth11">Use of impossible orthographic patterns when writing (i.e., eggzit for exit)</label>
+					</p>
+				</div>	
+				<div id="submitImpacts" class="hidden">
+				<input type="submit" name="submit">
+				</div>
+			</form>	
+	</div>
+
+	<div id="statement" class="hidden">
+		<h3>Here is the statement you should place in the "Impact of Disability" section of GoIEP. This section is in the "other info" tab of the IEP. It asks the question, "How does the student's disability affect his/her involvement in the general education curriculum?". After you copy and paste, edit as you see fit for your student:</h3>
+		<p><span id="fNamePlace"></span> <span id="lNamePlace"></span> is a student who meets the eligiility criteria for <span id="categoryPlace"></span> characterized by <span id="catSpecificWords"></span> <span id="deficitsPlace"></span>. <span id="impactsPlace"></span> Because of this, <span id="fNamePlace2"></span> needs accommodations and services in order to access the general education curriculum at this time.</p>
+	</div>
+	</body>
+</div>
+		
+
+	<footer>
+		<p>&copy; 2020 <span id="credit">Website created by <a href="https://ambernicholas.me">Amber Nicholas</a></span></p>
+	</footer>
+</html>
