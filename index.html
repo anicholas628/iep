@@ -32,19 +32,21 @@
 			<!--Impact Form-->
 			
 				<form id="categoryForm" name="name" action="" method=""><!--GET shows the data in the URL. POST does not-->
-					<label for="fname">First name:</label><!--The "for" in the label should match the "id" of the input-->
+					<label for="fname" class="eligLabel">First name:</label><!--The "for" in the label should match the "id" of the input-->
 					<input type="text" name="fname" id="fname" required><br><!--the name refers to the label for what is sent to the server-->
-					<label for="lname">Last name:</label>
+					<label for="lname" class="eligLabel">Last name:</label>
 					<input type="text" name="lname" id=fname><br>
-					<label for="gender">Gender:</label>
+					<label for="gender" class="eligLabel">Gender:</label>
 					<select name="gender" id="gender">
 						<option value="him">male</option>
 						<option value="her">female</option>
 					</select>
-					<label for="category">Eligibility Category:</label>
-					<select name="category" id="category">
-						<option value="specific learning disability">Specific Learning Disability</option>
-					</select>
+					<div id="categorySelect">
+					<label for="category" class="eligLabel">Eligibility Category:</label>
+						<select name="category" id="category">
+							<option value="specific learning disability">Specific Learning Disability</option>
+						</select>
+					</div>
 					<input type="submit" value="submit" id="submitCategoryForm"><!--value specifies what the button should say-->
 				</form>
 			</div>
